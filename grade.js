@@ -1,4 +1,9 @@
 
+//Student Grade Management using Object
+// Objective:
+// Create a JavaScript program that utilizes an object to manage student grades across multiple subjects. Implement functionalities to add grades for students, calculate the average grade, find a specific student's grades, list all students and their grades, and determine the overall best student based on total grades.
+
+
 
 let studentGrades = {
 
@@ -75,6 +80,4 @@ let findOverallBestStudent=()=>{
 
 
 findOverallBestStudent()
-
-//arrow functions
 
