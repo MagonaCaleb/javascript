@@ -1,27 +1,6 @@
-// ``` JavaScript Assignment: Student Grade Management using Object
+Student Grade Management using Object
 // Objective:
 // Create a JavaScript program that utilizes an object to manage student grades across multiple subjects. Implement functionalities to add grades for students, calculate the average grade, find a specific student's grades, list all students and their grades, and determine the overall best student based on total grades.
-
-// Instructions:
-// Data Setup:
-
-// Use an object where keys are student names (string) and values are arrays of integers representing grades for subjects (e.g., Math, Science, English, SST).
-// Tasks:
-
-// Implement methods to:
-// Add grades for a student: addGrade(studentName, grades).
-// Calculate and display the average grade for a student: calculateAverageGrade(studentName).
-// Find and display a specific student's grades: findStudentGrades(studentName).
-// List all students and their grades: listAllStudents().
-// Find and display the overall best student based on total grades: findOverallBestStudent().
-// Output:
-
-// Print the results of each method call clearly labeled (e.g., "Average Grade for John: 85").
-// Requirements:
-
-// Use an object to store student names and their corresponding grades.
-// Ensure proper error handling, such as checking for non-existent students when retrieving grades.
-// Provide a clear and structured code format with appropriate comments.
 
 
 
