@@ -49,11 +49,6 @@ class Developer extends Employee {
 }
 
 function main() {
-    // const name = "Caleb";
-    // const age = 22;
-    // const salary = 50000;
-    // const department = "IT";
-    // const programmingLanguages = ["Java", "JavaScript", "Python"];
     
     const manager = new Manager("Elisha",30,20000,"IT");
 
