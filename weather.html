@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>weather report </title>
+</head>
+
+<body>
+    <h1>Weather app </h1>
+    <input type="text" id="input" placeholder="Enter city here">
+    <button onClick="searchCity()">Search</button>
+    <div class="error">
+        Invalid city name
+    </div>
+
+    <div class="weather">
+        
+        <p id="firstParagraph"></p>
+        <p id="secondParagraph"></p>
+        <p id="thirdParagraph"></p>
+        <p id="fourthParagraph"></p>
+        
+    </div>
+    
+    <script>
+
+        let url = "https://api.openweathermap.org/data/2.5/weather?q=";
+
+
+        let apiKey = "&appid=6e3ac435ca447a585560bd9b4286d5e4&units=metric"
+
+
+        async function searchCity() {
+
+
+
+            let city = document.getElementById("input").value;
+
+            let finalURL = url + city + apiKey;
+
+
+            let response = await fetch(finalURL);
+
+
+            if (response.status == 404) {
+                document.querySelector(".error").style.display = "block";
+               document.querySelector(".weather").style.display = "none";
+                
+            } else {
+                let data = await response.json();
+                console.log(data);
+                document.getElementById("firstParagraph").innerHTML = "Temperature: " + data.main.temp + "°C";
+                document.getElementById("secondParagraph").innerHTML = "Humidity: " + data.main.humidity + "%";
+                document.getElementById("thirdParagraph").innerHTML = "Wind speed: " + data.wind.speed + "km/h";
+                document.getElementById("fourthParagraph").innerHTML = "Weather condition: " + data.weather[0].main ;
+
+            }
+
+
+        }
+
+    </script>
+</body>
+
+</html>
